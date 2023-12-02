@@ -5,6 +5,8 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
 import { useState, useEffect } from "react";
 import React from 'react';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
     const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

@@ -33,7 +33,7 @@ export const NavBar = () => {
     <Navbar expand="md" className={scrolled ? "scrolled": ""}>
       <Container>
         <Navbar.Brand href="/">
-          <Nav href="#home" className='tulisan-logo'>BlackRing.dev</Nav>
+          <Nav href="#home" className='tulisan-logo font-bold'>BlackRing.dev</Nav>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className='navbar-toggler-icon'></span>

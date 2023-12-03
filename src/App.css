@@ -470,12 +470,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Footer */
 .footer {
   padding: 0 0 50px 0;
-  background-image: url('./assets/img/footer-bg.png');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #000;
+  color:white;
+  border-top: 1px solid #4A2FBD;
 }
 
+.footer img {
+  height:50px;
+  width:50px;
+}
 
 .App {
   

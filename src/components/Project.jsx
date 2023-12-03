@@ -17,7 +17,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 export const Project = () => {
     const projek = [
         {
-            Judul: "Web Event Pitching festival",
+            Judul: "Web Pitching festival",
             desc: "Development & Design",
             imgUrl: proj1,
             urlProj: "https://pitchingfest.id/",

@@ -7,6 +7,8 @@ import { useState, useEffect } from "react";
 import React from 'react';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 export const Banner = () => {
     const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -50,13 +52,25 @@ export const Banner = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <span className="tagLine">Welcome to my portofolio</span>
-                        <h1>{"Hi I'm BlackRing "}<br></br><span className="wrap" id='el'>{curWord}</span><span className='cursor'>|</span></h1>
-                        <p>Lorem aksj ksajdl ksakj iije owpaojs jingse mangsungs diklao ksalji heapw azable munaco siapa daya </p>
-                        <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25}/> </button>
+                        <TrackVisibility>
+                        {({isVisible}) =>
+                        <div className={isVisible ? "animate__animated animate__fadeInLeft" : ""}>
+                            <h1>{"Hi I'm Gilang Prakoso "}<br></br><span className="wrap" id='el'>{curWord}</span><span className='cursor'>|</span></h1>
+                                <p>My background is as an information systems student at a university in Indonesia, Nice to meet you.</p>
+                                <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25}/> </button>
+                        </div>}
+                        </TrackVisibility>                      
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt="header img" />
+                        <TrackVisibility>
+                        {({ isVisible }) =>
+                        <div className={isVisible ? "animate__animated animate__fadeInRight" : ""}>
+                            <img src={headerImg} alt="header img" />
+                        </div>
+                         
+                        }
+                        </TrackVisibility>
+                        
                     </Col>
                 </Row>
             </Container>

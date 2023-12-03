@@ -9,6 +9,9 @@ import Tab from 'react-bootstrap/Tab';
 import { ProjectCard } from './ProjectCard';
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
+import React from 'react';
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 
 export const Project = () => {
@@ -39,7 +42,8 @@ export const Project = () => {
                 <Row>
                     <Col>
                         <TrackVisibility>
-                        <h2>Portofolio</h2>
+                            <AnimationOnScroll animateIn='animate__fadeIn'>
+                            <h2>Portofolio</h2>
                         <p></p>
                         <Tab.Container id='projects-tabs' defaultActiveKey="first">
                         <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
@@ -52,22 +56,29 @@ export const Project = () => {
                         </Nav>
                         <Tab.Content>
                             <Tab.Pane eventKey="first">
-                            <Row>
-                                {
-                                projek.map((project, index) => {
-                                    return (
-                                    <ProjectCard key={index}
-                                    {...project}/>
-                                    )
-                                })
-                                }
-                            </Row>
+                                <AnimationOnScroll animateIn='animate__fadeInUp'>
+                                    <Row>
+                                        
+                                            {
+                                        projek.map((project, index) => {
+                                            return (
+                                            
+                                            <ProjectCard key={index}
+                                            {...project}/>
+                                            )
+                                        })
+                                        }
+                                        
+                                        
+                                    </Row>
+                                </AnimationOnScroll>
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                            <p>Coming Soon.</p>
                             </Tab.Pane>
                         </Tab.Content>
                         </Tab.Container>
+                            </AnimationOnScroll>
                         </TrackVisibility> 
                     </Col>
                 </Row>

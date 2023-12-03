@@ -9,6 +9,12 @@ import gambar3 from '../assets/logo/capcut-logo-1.png';
 import gambar4 from '../assets/logo/Ai-logo.png';
 import gambar5 from '../assets/logo/canva-logo.png';
 import colorSharp from '../assets/img/color-sharp.png';
+import React from 'react';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+
 
 
 export const Skills = () => {
@@ -36,32 +42,41 @@ export const Skills = () => {
             <Container>
                 <Row>
                     <Col>
-                        <div className='skill-bx py-6 mt-10 px-auto'>
-                            <h2>Skills & Tools</h2>
-                            <p>Skills and tools that I can use in developing a website</p>
-                            <Carousel responsive={responsive} infinite={true} className='skill-slider'>
-                                <div className='item'>
-                                    <img src={gambar1} alt='image' />
-                                    <h5>JavaScript</h5>
-                                </div>
-                                <div className='item'>
-                                    <img src={gambar2} alt='image' />
-                                    <h5>UI TailwindCSS</h5>
-                                </div>
-                                <div className='item'>
-                                    <img src={gambar3} alt='image' />
-                                    <h5>Capcut Video Editing</h5>
-                                </div>
-                                <div className='item'>
-                                    <img src={gambar4} alt='image' />
-                                    <h5>Adobe illustrator</h5>
-                                </div>
-                                <div className='item'>
-                                    <img src={gambar5} alt='image' />
-                                    <h5>Design Canva</h5>
-                                </div>
-                            </Carousel>
+                    <TrackVisibility>
+                    {({isVisible}) =>
+                        <div className={isVisible}>
+                            <AnimationOnScroll animateIn='animate__fadeIn'>
+                                <div className='skill-bx py-6 mt-10 px-auto'>
+                                <h2>Skills & Tools</h2>
+                                <p className='mb-2'>Skills and tools that I can use in developing a website</p>
+                                <Carousel responsive={responsive} infinite={true} className='skill-slider pt-7'>
+                                    <div className='item'>
+                                        <img src={gambar1} alt='image' />
+                                        <h5>JavaScript</h5>
+                                    </div>
+                                    <div className='item'>
+                                        <img src={gambar2} alt='image' />
+                                        <h5>UI TailwindCSS</h5>
+                                    </div>
+                                    <div className='item'>
+                                        <img src={gambar3} alt='image' />
+                                        <h5>Capcut Video Editing</h5>
+                                    </div>
+                                    <div className='item'>
+                                        <img src={gambar4} alt='image' />
+                                        <h5>Adobe illustrator</h5>
+                                    </div>
+                                    <div className='item'>
+                                        <img src={gambar5} alt='image' />
+                                        <h5>Design Canva</h5>
+                                    </div>
+                                </Carousel>
+                            </div>
+                            </AnimationOnScroll>
+                            
                         </div>
+                    }
+                    </TrackVisibility>  
                     </Col>
                 </Row>
             </Container>

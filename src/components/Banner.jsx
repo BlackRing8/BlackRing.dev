@@ -2,13 +2,12 @@ import Container from 'react-bootstrap/Container';
 import  Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg2 from "../assets/img/astronot-animasi2.svg";
 import { useState, useEffect } from "react";
 import React from 'react';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import "animate.css/animate.min.css";
-import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 export const Banner = () => {
     const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -25,6 +24,8 @@ export const Banner = () => {
         while (true) {
             let i = 0;
             let curWord = phrases[curPhraseIndex];
+
+            await sleep(sleepTime * 110);
 
             while (i < curWord.length) {
             setCurWord(curWord.substring(0, i + 1));
@@ -54,7 +55,7 @@ export const Banner = () => {
                     <Col xs={12} md={6} xl={7}>
                         <TrackVisibility>
                         {({isVisible}) =>
-                        <div className={isVisible ? "animate__animated animate__fadeInLeft" : ""}>
+                        <div className={isVisible}>
                             <h1>{"Hi I'm Gilang Prakoso "}<br></br><span className="wrap" id='el'>{curWord}</span><span className='cursor'>|</span></h1>
                                 <p>My background is as an information systems student at a university in Indonesia, Nice to meet you.</p>
                                 <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25}/> </button>
@@ -64,8 +65,8 @@ export const Banner = () => {
                     <Col xs={12} md={6} xl={5}>
                         <TrackVisibility>
                         {({ isVisible }) =>
-                        <div className={isVisible ? "animate__animated animate__fadeInRight" : ""}>
-                            <img src={headerImg} alt="header img" />
+                        <div className={isVisible}>
+                            <img src={headerImg2} alt="header img" />
                         </div>
                          
                         }

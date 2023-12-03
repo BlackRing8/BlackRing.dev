@@ -31,7 +31,6 @@ html {
 body {
   font-weight: 400;
   overflow-x: hidden;
-  position: relative;
   background-color: #121212 !important;
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
@@ -66,7 +65,7 @@ nav.navbar {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 9999;
+  z-index: 5;
   transition: 0 ease-in-out;
 }
 
@@ -265,13 +264,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 @keyframes updown {
     0% {
-        transform: translateY(-10px);
+        transform: translateY(-20px);
     }
     50% {
-        transform: translateY(10px);
+        transform: translateY(20px);
     }
     100% {
-        transform: translateY(-10px);
+        transform: translateY(-20px);
     }
 }
 .txt-rotate > .wrap {

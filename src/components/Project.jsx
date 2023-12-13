@@ -1,5 +1,4 @@
 import proj1 from '../assets/img/porto1.png';
-import proj2 from '../assets/img/porto2.png';
 import proj3 from '../assets/img/porto4.png';
 import proj4 from '../assets/img/porto5.png';
 import Container from 'react-bootstrap/Container';
@@ -22,12 +21,6 @@ export const Project = () => {
             desc: "Development & Design",
             imgUrl: proj1,
             urlProj: "https://pitchingfest.id/",
-        },
-        {
-            Judul: "Web Gallery art",
-            desc: "Development & Design",
-            imgUrl: proj2,
-            urlProj: "https://blackring8.github.io/YourUniverse.id/",
         },
         {
             Judul: "Organization Web",

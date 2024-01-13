@@ -12,6 +12,7 @@ import "animate.css/animate.min.css";
 export const Banner = () => {
     const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
     const phrases = ["FrontEnd Web Developer"];
+    const phrases2 = ["Graphic Designer"];
   
     const [curPhraseIndex, setCurPhraseIndex] = useState(0);
     const [curWord, setCurWord] = useState('');
@@ -24,6 +25,7 @@ export const Banner = () => {
         while (true) {
             let i = 0;
             let curWord = phrases[curPhraseIndex];
+            let curWord2 = phrases2[curPhraseIndex];
 
             await sleep(sleepTime * 110);
 
@@ -33,7 +35,7 @@ export const Banner = () => {
             i++;
             }
 
-            await sleep(sleepTime * 100);
+            await sleep(sleepTime * 20);
 
             while (i > 0) {
             setCurWord(curWord.substring(0, i - 1));
@@ -42,6 +44,21 @@ export const Banner = () => {
             }
 
             await sleep(sleepTime * 20);
+
+            while (i < curWord2.length) {
+                setCurWord(curWord2.substring(0, i + 1));
+                await sleep(sleepTime2);
+                i++;
+                }
+            
+            await sleep(sleepTime * 20);
+
+            while (i > 0) {
+                setCurWord(curWord2.substring(0, i - 1));
+                await sleep(sleepTime2);
+                i--;
+                }
+
         }
         };
 

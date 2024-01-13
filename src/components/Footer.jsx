@@ -13,7 +13,7 @@ export const Footer = () => {
               <img src={logo} className='rounded-full border'/>
             </Col>
             <Col size={12} sm={7} className='text-center text-sm-start mt-3 font-semibold '>
-                <p>BlackRing.dev</p>
+                <p>BlackRing.Arts</p>
             </Col>
             <Col size={12} sm={4} className="text-center text-sm-end mt-3 ">
               <p>Copyright 2022. All Rights Reserved</p>

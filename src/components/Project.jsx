@@ -1,12 +1,17 @@
 import proj1 from '../assets/img/porto1.png';
 import proj3 from '../assets/img/porto4.png';
 import proj4 from '../assets/img/porto5.png';
+import design1 from '../assets/design/logo1.png';
+import design2 from '../assets/design/logo1-2.png';
+import design3 from '../assets/design/logo2.png';
+import design4 from '../assets/design/logo3.png';
 import Container from 'react-bootstrap/Container';
 import  Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Nav from 'react-bootstrap/Nav';
 import Tab from 'react-bootstrap/Tab';
 import { ProjectCard } from './ProjectCard';
+import { ProjectDesign } from './ProjectDesign';
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
 import React from 'react';
@@ -35,6 +40,29 @@ export const Project = () => {
             urlProj: "https://blackring8.github.io/GilangPrakoso-Profile/",
         },
     ];
+
+    const design = [
+        {
+            Nama: "Logo-1978",
+            designUrl: design1,
+            urlDesign: "https://www.instagram.com/p/C2CNUcfBpBP/",
+        },
+        {
+            Nama: "Logo-1978",
+            designUrl: design2,
+            urlDesign: "https://www.instagram.com/p/C2CNl8HBhwj/",
+        },
+        {
+            Nama: "Logo-1979",
+            designUrl: design3,
+            urlDesign: "https://www.instagram.com/p/C2CM-y5hxit/",
+        },
+        {
+            Nama: "Logo-1980",
+            designUrl: design4,
+            urlDesign: "https://www.instagram.com/p/C2CQbANh0EP/",
+        },
+    ];
     
     return(
         <section className='project' id='portofolio'>
@@ -51,7 +79,7 @@ export const Project = () => {
                                 <Nav.Link eventKey="first">Website</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="second">Design Poster</Nav.Link>
+                                <Nav.Link eventKey="second">Design</Nav.Link>
                             </Nav.Item>
                         </Nav>
                         <Tab.Content>
@@ -74,7 +102,22 @@ export const Project = () => {
                                 </AnimationOnScroll>
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
-                            <p>Coming Soon.</p>
+                            <AnimationOnScroll animateIn='animate__fadeInUp'>
+                                    <Row>
+                                        
+                                            {
+                                        design.map((design, index) => {
+                                            return (
+                                            
+                                            <ProjectDesign key={index}
+                                            {...design}/>
+                                            )
+                                        })
+                                        }
+                                        
+                                        
+                                    </Row>
+                                </AnimationOnScroll>
                             </Tab.Pane>
                         </Tab.Content>
                         </Tab.Container>

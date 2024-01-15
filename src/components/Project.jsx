@@ -5,6 +5,7 @@ import design1 from '../assets/design/logo1.png';
 import design2 from '../assets/design/logo1-2.png';
 import design3 from '../assets/design/logo2.png';
 import design4 from '../assets/design/logo3.png';
+import design5 from '../assets/design/logo4.png';
 import Container from 'react-bootstrap/Container';
 import  Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -61,6 +62,11 @@ export const Project = () => {
             Nama: "Logo-1980",
             designUrl: design4,
             urlDesign: "https://www.instagram.com/p/C2CQbANh0EP/",
+        },
+        {
+            Nama: "Logo-15124",
+            designUrl: design5,
+            urlDesign: "https://www.instagram.com/p/C2HmmXUy5Rn/",
         },
     ];
     

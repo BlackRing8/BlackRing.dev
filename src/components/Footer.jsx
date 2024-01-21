@@ -16,7 +16,7 @@ export const Footer = () => {
                 <p>BlackRing.Arts</p>
             </Col>
             <Col size={12} sm={4} className="text-center text-sm-end mt-3 ">
-              <p>Copyright 2022. All Rights Reserved</p>
+              <p>Copyright 2024. All Rights Reserved</p>
             </Col>
           </Row>
         </Container>

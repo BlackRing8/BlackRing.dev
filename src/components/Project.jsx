@@ -1,6 +1,7 @@
 import proj1 from "../assets/img/porto1.png";
 import proj3 from "../assets/img/porto4.png";
 import proj4 from "../assets/img/porto5.png";
+import proj5 from "../assets/img/porto6.png";
 import design1 from "../assets/design/logo1.png";
 import design2 from "../assets/design/logo1-2.png";
 import design3 from "../assets/design/logo2.png";
@@ -22,6 +23,12 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 
 export const Project = () => {
   const projek = [
+    {
+      Judul: "Web Wisata Detik",
+      desc: "Development",
+      imgUrl: proj5,
+      urlProj: "https://detik-traveler.vercel.app/",
+    },
     {
       Judul: "Web Pitching festival",
       desc: "Development & Design",

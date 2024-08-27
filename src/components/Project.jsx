@@ -1,6 +1,7 @@
 import proj1 from "../assets/img/porto1.png";
 import proj3 from "../assets/img/porto4.png";
-import proj4 from "../assets/img/porto5.png";
+import proj4 from "../assets/img/porto2.png";
+import proj5 from "../assets/img/porto3.png";
 import design1 from "../assets/design/logo1.png";
 import design2 from "../assets/design/logo1-2.png";
 import design3 from "../assets/design/logo2.png";
@@ -23,22 +24,28 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 export const Project = () => {
   const projek = [
     {
-      Judul: "Web Pitching festival",
-      desc: "Development & Design",
+      Judul: "Web Detik Traveller",
+      desc: "Development",
       imgUrl: proj1,
+      urlProj: "https://detik-traveler.vercel.app/",
+    },
+    {
+      Judul: "Web Pitching Festival",
+      desc: "Development & Design",
+      imgUrl: proj4,
       urlProj: "https://pitchingfest.id/",
     },
     {
-      Judul: "Organization Web",
+      Judul: "Web Pariwisata Situ kandang sapi",
       desc: "Development & Design",
-      imgUrl: proj4,
-      urlProj: "https://blackring8.github.io/Karang-Taruna-03/",
+      imgUrl: proj5,
+      urlProj: "https://www.situkandangsapi.info/",
     },
     {
-      Judul: "Personal Website",
+      Judul: "Organization web",
       desc: "Development & Design",
       imgUrl: proj3,
-      urlProj: "https://blackring8.github.io/GilangPrakoso-Profile/",
+      urlProj: "https://blackring8.github.io/Karang-Taruna-03/",
     },
   ];
 

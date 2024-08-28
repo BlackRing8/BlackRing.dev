@@ -3,6 +3,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg2 from "../assets/img/astronot-animasi2.svg";
+import headerImg from "../assets/img/poto.png";
 import { useState, useEffect } from "react";
 import React from "react";
 import "animate.css";
@@ -65,7 +66,7 @@ export const Banner = () => {
   }, [curPhraseIndex]);
 
   return (
-    <section className="banner sm:pt-44" id="home">
+    <section className="banner items-center" id="home">
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
@@ -92,7 +93,7 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) => (
                 <div className={isVisible}>
-                  <img src={headerImg2} alt="header img" />
+                  <img src={headerImg} alt="header img" className="rounded-3xl lg:rounded-full mt-3 lg:mt-0" />
                 </div>
               )}
             </TrackVisibility>

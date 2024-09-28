@@ -3,9 +3,3 @@
 .test-font {
   font-family: "Share Tech Mono", monospace;
 }
-
-.test {
-  background-image: url("../../assets/img/poto.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}

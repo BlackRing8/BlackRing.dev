@@ -14,9 +14,9 @@ function App() {
       {/* <LoaderHome /> */}
       <NavBar />
       <BannerV2 />
-      <Skills />
+      {/* <Skills />
       <Project />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
